@@ -64,6 +64,18 @@ white-space:nowrap;
 color:#61dcff;
 }
 
+.brand-row{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+width:100%;
+}
+
+.brand-row .search-box{
+margin-left:auto;
+}
+
 nav{
 display:flex;
 gap:8px;
@@ -338,13 +350,34 @@ padding:12px 14px;
 }
 
 .top{
+display:flex;
 flex-direction:column;
 align-items:stretch;
 gap:10px;
 }
 
+.brand-row{
+width:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:10px;
+}
+
 .logo{
 font-size:24px;
+}
+
+.brand-row .search-box{
+margin-left:auto;
+}
+
+.search-box input{
+width:125px;
+}
+
+.search-box input:focus{
+width:145px;
 }
 
 nav{
@@ -455,8 +488,21 @@ transform:translateY(-1px);
 
 <div class="top">
 
+<div class="brand-row">
+
 <div class="logo">
 🚀 Tech<span>Nova</span>
+</div>
+
+<div class="search-box">
+<input
+id="search"
+type="search"
+placeholder="Rechercher..."
+onkeydown="if(event.key==='Enter') rechercher()">
+<button onclick="rechercher()" aria-label="Rechercher">🔍</button>
+</div>
+
 </div>
 
 <nav>
@@ -468,15 +514,6 @@ transform:translateY(-1px);
 <a href="#reseaux">📡 Réseaux</a>
 <a href="#termux">💻 Termux</a>
 <a href="#outils">🛠️ Outils</a>
-
-<div class="search-box">
-<input
-id="search"
-type="search"
-placeholder="Rechercher..."
-onkeydown="if(event.key==='Enter') rechercher()">
-<button onclick="rechercher()" aria-label="Rechercher">🔍</button>
-</div>
 </nav>
 
 </div>
