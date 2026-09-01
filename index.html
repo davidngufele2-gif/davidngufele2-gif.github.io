@@ -1,207 +1,122 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechNova – Technologie, Applications et Astuces</title>
+<meta name="description" content="TechNova : applications Android, Internet, réseaux, Termux, outils et astuces technologiques.">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8240074121562696" crossorigin="anonymous"></script>
 <meta name="google-adsense-account" content="ca-pub-8240074121562696">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>TechNova – Astuces Android, Internet et Technologie</title>
-
-  <meta name="description" content="TechNova : astuces Android, Internet, applications, Termux, technologie et outils gratuits pour l'Afrique.">
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
-    }
-
-    header {
-      background: #111827;
-      color: white;
-      padding: 25px 15px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0 0 8px;
-      font-size: 30px;
-    }
-
-    header p {
-      margin: 0;
-      opacity: 0.9;
-    }
-
-    nav {
-      background: white;
-      padding: 12px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,.08);
-    }
-
-    nav a {
-      color: #111827;
-      text-decoration: none;
-      margin: 0 8px;
-      font-weight: bold;
-    }
-
-    .hero {
-      max-width: 900px;
-      margin: 25px auto;
-      padding: 30px 20px;
-      background: white;
-      border-radius: 14px;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 26px;
-      margin-top: 0;
-    }
-
-    .categories {
-      max-width: 900px;
-      margin: auto;
-      padding: 10px 15px 30px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-    }
-
-    .card {
-      background: white;
-      padding: 22px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,.07);
-    }
-
-    .card h3 {
-      margin-top: 0;
-    }
-
-    .card a {
-      display: inline-block;
-      margin-top: 8px;
-      color: #2563eb;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .support {
-      max-width: 900px;
-      margin: 10px auto 30px;
-      padding: 25px 20px;
-      background: white;
-      border-radius: 14px;
-      text-align: center;
-    }
-
-    .support a {
-      display: inline-block;
-      background: #111827;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      margin-top: 30px;
-    }
-  </style>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
+header{background:#111827;color:white;padding:22px 16px;text-align:center}
+header h1{margin:0;font-size:32px}
+header p{margin:8px 0 0;color:#cbd5e1}
+nav{background:white;padding:12px;display:flex;gap:8px;overflow-x:auto;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #0001}
+nav a{text-decoration:none;color:#172033;font-weight:bold;white-space:nowrap;padding:9px 12px;border-radius:20px;background:#eef2ff}
+main{max-width:1000px;margin:auto;padding:18px}
+.hero{background:white;border-radius:18px;padding:25px;margin-bottom:18px;text-align:center;box-shadow:0 3px 12px #0001}
+.hero h2{font-size:28px;margin:5px}
+.hero p{color:#64748b;line-height:1.6}
+.btn{display:inline-block;background:#2563eb;color:white;padding:13px 22px;border-radius:10px;text-decoration:none;font-weight:bold;margin:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.card{background:white;padding:20px;border-radius:16px;box-shadow:0 3px 10px #0001}
+.card h3{margin-top:0}
+.card p{color:#64748b;line-height:1.5}
+.video{background:#111827;border-radius:16px;padding:35px;text-align:center;color:white;margin:18px 0}
+.ad{background:#fff;border:1px dashed #cbd5e1;border-radius:12px;padding:25px;text-align:center;margin:20px 0;color:#64748b}
+footer{background:#111827;color:#cbd5e1;text-align:center;padding:25px;margin-top:30px}
+section{scroll-margin-top:70px;margin-bottom:28px}
+</style>
 </head>
-
 <body>
-
 <header>
-  <h1>🌍 TechNova</h1>
-  <p>Android • Internet • Applications • Technologie</p>
+<h1>🚀 TechNova</h1>
+<p>Technologie • Applications • Internet • Astuces</p>
 </header>
 
 <nav>
-  <a href="#">Accueil</a>
-  <a href="#android">Android</a>
-  <a href="#internet">Internet</a>
-  <a href="#termux">Termux</a>
-  <a href="#outils">Outils</a>
+<a href="#applications">📱 Applications</a>
+<a href="#videos">🎬 Vidéos</a>
+<a href="#android">🤖 Android</a>
+<a href="#internet">🌐 Internet</a>
+<a href="#reseaux">📡 Réseaux</a>
+<a href="#termux">💻 Termux</a>
+<a href="#outils">🛠️ Outils</a>
 </nav>
 
+<main>
 <section class="hero">
-  <h2>La technologie expliquée simplement</h2>
-  <p>
-    Découvrez des astuces Android, des conseils Internet,
-    des applications utiles et des outils gratuits adaptés
-    aux utilisateurs africains.
-  </p>
+<h2>Bienvenue sur TechNova</h2>
+<p>Découvrez des applications, des astuces Android, Internet, réseaux, Termux et différents outils technologiques.</p>
+<a class="btn" href="#applications">Découvrir les applications</a>
+<a class="btn" href="#videos">Voir les vidéos</a>
 </section>
 
-<section class="categories">
+<div class="ad">📢 Espace publicitaire</div>
 
-  <div class="card" id="android">
-    <h3>📱 Android</h3>
-    <p>
-      Astuces, réglages, applications et solutions
-      pour mieux utiliser votre téléphone Android.
-    </p>
-    <a href="#">Voir les astuces →</a>
-  </div>
-
-  <div class="card" id="internet">
-    <h3>🌐 Internet</h3>
-    <p>
-      Conseils pour Internet mobile, Wi-Fi,
-      consommation des données et connexion.
-    </p>
-    <a href="#">Voir les conseils →</a>
-  </div>
-
-  <div class="card" id="termux">
-    <h3>💻 Termux</h3>
-    <p>
-      Tutoriels Termux, Git, GitHub et développement
-      directement depuis Android.
-    </p>
-    <a href="#">Voir les tutoriels →</a>
-  </div>
-
-  <div class="card" id="outils">
-    <h3>🛠️ Outils gratuits</h3>
-    <p>
-      Des outils simples et gratuits directement
-      utilisables depuis votre navigateur.
-    </p>
-    <a href="#">Découvrir les outils →</a>
-  </div>
-
+<section id="applications">
+<h2>📱 Applications</h2>
+<div class="grid">
+<div class="card">
+<h3>🎹 Clavier Ndruna</h3>
+<p>Un clavier Android conçu pour faciliter l'écriture en langue Ndruna.</p>
+<a class="btn" href="https://github.com/davidngufele2-gif/Nduna-Clavier/releases" target="_blank">Télécharger</a>
+</div>
+<div class="card">
+<h3>📲 Nouvelles applications</h3>
+<p>D'autres applications utiles seront ajoutées prochainement sur TechNova.</p>
+</div>
+</div>
 </section>
 
-<section class="support">
-  <h2>❤️ Soutenir TechNova</h2>
-  <p>
-    Ce site est créé pour partager gratuitement
-    des connaissances technologiques.
-  </p>
-
-  <a href="#">Soutenir le projet</a>
+<section id="videos">
+<h2>🎬 Vidéos</h2>
+<div class="video">
+<h3>Présentation TechNova</h3>
+<p>🎥 Une vidéo de présentation sera ajoutée ici.</p>
+<p>Tu pourras ensuite remplacer cette zone par ta vidéo YouTube.</p>
+</div>
 </section>
+
+<section id="android">
+<h2>🤖 Android</h2>
+<div class="grid">
+<div class="card"><h3>Astuces Android</h3><p>Conseils, réglages et solutions pour mieux utiliser Android.</p></div>
+<div class="card"><h3>Applications Android</h3><p>Découvre des applications et outils Android utiles.</p></div>
+</div>
+</section>
+
+<section id="internet">
+<h2>🌐 Internet</h2>
+<div class="card"><h3>Conseils Internet</h3><p>Astuces pour améliorer ta connexion, économiser les données et utiliser Internet efficacement.</p></div>
+</section>
+
+<section id="reseaux">
+<h2>📡 Réseaux</h2>
+<div class="card"><h3>Réseaux et connexion</h3><p>Informations et astuces concernant Wi-Fi, 4G, 5G, routeurs et réseaux.</p></div>
+</section>
+
+<section id="termux">
+<h2>💻 Termux</h2>
+<div class="card"><h3>Commandes Termux</h3><p>Guides et commandes utiles pour apprendre à utiliser Termux sur Android.</p></div>
+</section>
+
+<section id="outils">
+<h2>🛠️ Outils</h2>
+<div class="grid">
+<div class="card"><h3>🔧 Outils gratuits</h3><p>Une sélection d'outils pratiques pour Android et Internet.</p></div>
+<div class="card"><h3>📚 Guides</h3><p>Des guides simples pour résoudre différents problèmes technologiques.</p></div>
+</div>
+</section>
+
+<div class="ad">📢 Espace publicitaire AdSense</div>
+</main>
 
 <footer>
-  <p>© 2026 TechNova</p>
-  <p>Technologie et ressources gratuites pour l'Afrique.</p>
+<p>© 2026 TechNova — Technologie pour tous</p>
+<p>Applications • Astuces • Guides • Vidéos</p>
 </footer>
-
 </body>
 </html>
