@@ -363,13 +363,14 @@ font-size:24px;
 .search-box{
 display:flex;
 align-items:center;
+gap:5px;
 }
 
 .search-box input{
-width:170px;
+width:160px;
 padding:9px 12px;
 border:1px solid #ffffff55;
-border-radius:12px;
+border-radius:10px 0 0 10px;
 background:#ffffff18;
 color:white;
 font-size:14px;
@@ -382,14 +383,24 @@ color:#ffffffcc;
 }
 
 .search-box input:focus{
-width:210px;
 background:white;
 color:#172033;
-box-shadow:0 4px 15px #0003;
 }
 
-.search-box input:focus::placeholder{
-color:#7a8798;
+.search-box button{
+border:0;
+padding:9px 12px;
+border-radius:0 10px 10px 0;
+background:white;
+color:#0757a5;
+font-size:16px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.search-box button:hover{
+background:#e8f8ff;
+transform:translateY(-1px);
 }
 
 </style>
@@ -421,8 +432,9 @@ color:#7a8798;
 <input
 id="search"
 type="search"
-placeholder="🔎 Rechercher..."
-onkeyup="rechercher()">
+placeholder="Rechercher..."
+onkeydown="if(event.key==='Enter') rechercher()">
+<button onclick="rechercher()" aria-label="Rechercher">🔍</button>
 </div>
 </nav>
 
