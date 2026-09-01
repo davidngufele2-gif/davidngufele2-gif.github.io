@@ -38,7 +38,7 @@ line-height:1.6;
 header{
 background:linear-gradient(135deg,#06172f,#075bb5,#00a9ff);
 color:white;
-padding:18px 5%;
+padding:14px 5%;
 position:sticky;
 top:0;
 z-index:1000;
@@ -48,10 +48,14 @@ box-shadow:0 4px 20px #0003;
 .top{
 max-width:1200px;
 margin:auto;
+}
+
+.brand-row{
 display:flex;
 align-items:center;
 justify-content:space-between;
 gap:20px;
+width:100%;
 }
 
 .logo{
@@ -64,16 +68,46 @@ white-space:nowrap;
 color:#61dcff;
 }
 
-.brand-row{
+.search-box{
 display:flex;
 align-items:center;
-justify-content:space-between;
-gap:20px;
-width:100%;
+margin-left:auto;
 }
 
-.brand-row .search-box{
-margin-left:auto;
+.search-box input{
+width:190px;
+height:40px;
+padding:8px 12px;
+border:1px solid #ffffff55;
+border-radius:10px 0 0 10px;
+background:#ffffff18;
+color:white;
+font-size:14px;
+outline:none;
+}
+
+.search-box input::placeholder{
+color:#ffffffcc;
+}
+
+.search-box input:focus{
+background:white;
+color:#172033;
+}
+
+.search-box button{
+height:40px;
+border:0;
+padding:0 14px;
+border-radius:0 10px 10px 0;
+background:white;
+color:#0757a5;
+font-size:17px;
+cursor:pointer;
+}
+
+.search-box button:hover{
+background:#e8f8ff;
 }
 
 nav{
@@ -82,8 +116,8 @@ gap:8px;
 align-items:center;
 flex-wrap:nowrap;
 overflow-x:auto;
-max-width:100%;
-padding:3px 0;
+margin-top:12px;
+padding-bottom:3px;
 scrollbar-width:none;
 }
 
@@ -96,31 +130,21 @@ color:white;
 text-decoration:none;
 font-weight:bold;
 font-size:14px;
-padding:8px 12px;
+padding:8px 11px;
 border-radius:10px;
-transition:all .25s ease;
+white-space:nowrap;
+transition:.25s;
 }
 
 nav a:hover{
 background:#ffffff22;
 color:#72dcff;
-transform:translateY(-1px);
 }
 
 nav a:first-child{
-background:#ffffff;
+background:white;
 color:#0757a5;
 box-shadow:0 4px 12px #0003;
-}
-
-nav a:first-child:hover{
-background:#e8f8ff;
-color:#064d91;
-transform:translateY(-2px);
-}
-
-nav a:hover{
-color:#72dcff;
 }
 
 /* HERO */
@@ -346,14 +370,11 @@ text-decoration:none;
 @media(max-width:800px){
 
 header{
-padding:12px 14px;
+padding:10px 12px;
 }
 
 .top{
-display:flex;
-flex-direction:column;
-align-items:stretch;
-gap:10px;
+width:100%;
 }
 
 .brand-row{
@@ -361,50 +382,39 @@ width:100%;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:10px;
+gap:8px;
 }
 
 .logo{
-font-size:24px;
+font-size:23px;
 }
 
-.brand-row .search-box{
+.search-box{
 margin-left:auto;
+flex-shrink:0;
 }
 
 .search-box input{
-width:125px;
+width:115px;
+height:36px;
+font-size:13px;
 }
 
-.search-box input:focus{
-width:145px;
+.search-box button{
+height:36px;
+padding:0 10px;
 }
 
 nav{
 width:100%;
 overflow-x:auto;
-flex-wrap:nowrap;
-white-space:nowrap;
-padding-bottom:5px;
+margin-top:10px;
 }
 
 nav a{
+font-size:12px;
+padding:7px 9px;
 flex:0 0 auto;
-font-size:13px;
-padding:8px 10px;
-}
-
-.search-box{
-flex:0 0 auto;
-margin-left:5px;
-}
-
-.search-box input{
-width:130px;
-}
-
-.search-box input:focus{
-width:160px;
 }
 
 .hero{
@@ -500,7 +510,10 @@ id="search"
 type="search"
 placeholder="Rechercher..."
 onkeydown="if(event.key==='Enter') rechercher()">
-<button onclick="rechercher()" aria-label="Rechercher">🔍</button>
+
+<button onclick="rechercher()" aria-label="Rechercher">
+🔍
+</button>
 </div>
 
 </div>
