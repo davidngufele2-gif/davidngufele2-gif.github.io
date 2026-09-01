@@ -1006,25 +1006,50 @@ document.getElementById("ndruna-downloads").textContent =
 
 function rechercher(){
 
-const texte =
-document.getElementById("search").value.toLowerCase();
+const input = document.getElementById("search");
+const texte = input.value.trim().toLowerCase();
 
-document.querySelectorAll(".searchable").forEach(card => {
+const cartes = document.querySelectorAll(".searchable");
 
-if(card.innerText.toLowerCase().includes(texte)){
+if(texte === ""){
 
-card.style.display="block";
+cartes.forEach(card => {
+card.style.display = "";
+});
+
+return;
+}
+
+cartes.forEach(card => {
+
+const contenu = card.innerText.toLowerCase();
+
+if(contenu.includes(texte)){
+
+card.style.display = "";
 
 }else{
 
-card.style.display="none";
+card.style.display = "none";
 
 }
 
 });
 
+const resultats = Array.from(cartes).filter(card => {
+return card.innerText.toLowerCase().includes(texte);
+});
+
+if(resultats.length > 0){
+
+resultats[0].scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
 }
 
+}
 
 afficherTelechargements();
 
