@@ -72,7 +72,30 @@ section{scroll-margin-top:70px;margin-bottom:28px}
 </a>
 
 <p>📦 Version : 1.0</p>
-<p>📊 Téléchargements : <span id="ndruna-downloads">0</span></p>
+<p>📊 Téléchargements : <span id="ndruna-downloads">...</span></p>
+
+<script>
+async function afficherTelechargements() {
+  try {
+    const r = await fetch("https://api.github.com/repos/davidngufele2-gif/Nduna-Clavier/releases/latest");
+    const release = await r.json();
+
+    let total = 0;
+    if (release.assets) {
+      release.assets.forEach(asset => {
+        total += asset.download_count || 0;
+      });
+    }
+
+    document.getElementById("ndruna-downloads").textContent =
+      total.toLocaleString("fr-FR");
+  } catch (e) {
+    document.getElementById("ndruna-downloads").textContent = "Indisponible";
+  }
+}
+
+afficherTelechargements();
+</script>
 </div>
 
 <div class="card">
