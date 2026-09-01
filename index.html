@@ -360,6 +360,38 @@ font-size:24px;
 
 }
 
+.search-box{
+display:flex;
+align-items:center;
+}
+
+.search-box input{
+width:170px;
+padding:9px 12px;
+border:1px solid #ffffff55;
+border-radius:12px;
+background:#ffffff18;
+color:white;
+font-size:14px;
+outline:none;
+transition:.25s;
+}
+
+.search-box input::placeholder{
+color:#ffffffcc;
+}
+
+.search-box input:focus{
+width:210px;
+background:white;
+color:#172033;
+box-shadow:0 4px 15px #0003;
+}
+
+.search-box input:focus::placeholder{
+color:#7a8798;
+}
+
 </style>
 </head>
 
@@ -378,12 +410,20 @@ font-size:24px;
 <nav>
 <a href="#">🏠 Accueil</a>
 <a href="#applications">📱 Applications</a>
-<a href="#actualites">À la une</a>
-<a href="#android">Android</a>
-<a href="#internet">Internet</a>
-<a href="#reseaux">Réseaux</a>
-<a href="#termux">Termux</a>
-<a href="#outils">Outils</a>
+<a href="#actualites">📰 À la une</a>
+<a href="#android">🤖 Android</a>
+<a href="#internet">🌐 Internet</a>
+<a href="#reseaux">📡 Réseaux</a>
+<a href="#termux">💻 Termux</a>
+<a href="#outils">🛠️ Outils</a>
+
+<div class="search-box">
+<input
+id="search"
+type="search"
+placeholder="🔎 Rechercher..."
+onkeyup="rechercher()">
+</div>
 </nav>
 
 </div>
@@ -456,15 +496,7 @@ Termux
 
 <!-- SEARCH -->
 
-<div class="search">
 
-<input
-id="search"
-type="search"
-placeholder="🔎 Rechercher sur TechNova..."
-onkeyup="rechercher()">
-
-</div>
 
 
 <!-- PUBLICITE -->
