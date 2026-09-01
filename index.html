@@ -1147,4 +1147,2302 @@ afficherTelechargements();
 </script>
 
 </body>
+</html> html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TechNova — Technologie, Applications, Android & Internet</title>
+
+<meta name="description" content="TechNova : applications Android, astuces, Internet, réseaux, Termux et outils technologiques.">
+
+<meta name="google-adsense-account" content="ca-pub-8240074121562696">
+
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8240074121562696"
+crossorigin="anonymous"></script>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f7fb;
+color:#172033;
+line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,#06172f,#075bb5,#00a9ff);
+color:white;
+padding:14px 5%;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 20px #0003;
+}
+
+.top{
+max-width:1200px;
+margin:auto;
+}
+
+.brand-row{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+width:100%;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+white-space:nowrap;
+}
+
+.logo span{
+color:#61dcff;
+}
+
+.search-box{
+display:flex;
+align-items:center;
+margin-left:auto;
+}
+
+.search-box input{
+width:190px;
+height:40px;
+padding:8px 12px;
+border:1px solid #ffffff55;
+border-radius:10px 0 0 10px;
+background:#ffffff18;
+color:white;
+font-size:14px;
+outline:none;
+}
+
+.search-box input::placeholder{
+color:#ffffffcc;
+}
+
+.search-box input:focus{
+background:white;
+color:#172033;
+}
+
+.search-box button{
+height:40px;
+border:0;
+padding:0 14px;
+border-radius:0 10px 10px 0;
+background:white;
+color:#0757a5;
+font-size:17px;
+cursor:pointer;
+}
+
+.search-box button:hover{
+background:#e8f8ff;
+}
+
+nav{
+display:flex;
+gap:8px;
+align-items:center;
+flex-wrap:nowrap;
+overflow-x:auto;
+margin-top:12px;
+padding-bottom:3px;
+scrollbar-width:none;
+}
+
+nav::-webkit-scrollbar{
+display:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+padding:8px 11px;
+border-radius:10px;
+white-space:nowrap;
+transition:.25s;
+}
+
+nav a:hover{
+background:#ffffff22;
+color:#72dcff;
+}
+
+nav a:first-child{
+background:white;
+color:#0757a5;
+box-shadow:0 4px 12px #0003;
+}
+
+/* HERO */
+
+.hero{
+max-width:1200px;
+margin:30px auto;
+padding:60px 30px;
+border-radius:25px;
+background:linear-gradient(135deg,#061a36,#0866c7);
+color:white;
+box-shadow:0 15px 40px #0002;
+}
+
+.hero h1{
+font-size:42px;
+margin:12px 0;
+}
+
+.hero p{
+font-size:18px;
+max-width:720px;
+color:#dceeff;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+.tag{
+display:inline-block;
+padding:6px 12px;
+background:#e9f6ff;
+color:#0875bd;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+}
+
+.hero .tag{
+background:#ffffff22;
+color:#fff;
+}
+
+.buttons{
+margin-top:25px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:12px 20px;
+border-radius:12px;
+background:white;
+color:#0757a5;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn.blue{
+background:#00b7ff;
+color:white;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:35px;
+}
+
+.stat{
+background:#ffffff18;
+padding:18px;
+border-radius:15px;
+text-align:center;
+}
+
+.stat strong{
+font-size:27px;
+display:block;
+}
+
+/* SEARCH */
+
+.search{
+margin:30px auto;
+max-width:700px;
+}
+
+.search input{
+width:100%;
+padding:16px 20px;
+border:1px solid #d5deea;
+border-radius:14px;
+font-size:16px;
+outline:none;
+background:white;
+box-shadow:0 4px 15px #0000000b;
+}
+
+/* SECTIONS */
+
+.section{
+margin:50px 0;
+}
+
+.title{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:22px;
+}
+
+.title h2{
+font-size:29px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* CARDS */
+
+.card{
+background:white;
+border-radius:18px;
+padding:24px;
+box-shadow:0 5px 20px #0000000d;
+border:1px solid #e7edf5;
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 14px 30px #0002;
+}
+
+.icon{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.card h3{
+font-size:21px;
+margin:8px 0;
+}
+
+.card p{
+color:#657184;
+margin:10px 0 18px;
+}
+
+.download{
+display:inline-block;
+background:#0878d1;
+color:white;
+padding:11px 16px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.download:hover{
+background:#055fa8;
+}
+
+.github{
+display:inline-block;
+color:#075da8;
+font-weight:bold;
+text-decoration:none;
+}
+
+.github:hover{
+text-decoration:underline;
+}
+
+/* ADS */
+
+.ad{
+margin:30px 0;
+padding:28px;
+text-align:center;
+background:white;
+border:1px dashed #b9c6d7;
+border-radius:15px;
+color:#7a8798;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:70px;
+background:#06172f;
+color:#b9c9dd;
+padding:40px 20px;
+text-align:center;
+}
+
+footer strong{
+color:white;
+font-size:20px;
+}
+
+footer a{
+color:#66d7ff;
+text-decoration:none;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+header{
+padding:10px 12px;
+}
+
+.top{
+width:100%;
+}
+
+.brand-row{
+width:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:8px;
+}
+
+.logo{
+font-size:23px;
+}
+
+.search-box{
+margin-left:auto;
+flex-shrink:0;
+}
+
+.search-box input{
+width:115px;
+height:36px;
+font-size:13px;
+}
+
+.search-box button{
+height:36px;
+padding:0 10px;
+}
+
+nav{
+width:100%;
+overflow-x:auto;
+margin-top:10px;
+}
+
+nav a{
+font-size:12px;
+padding:7px 9px;
+flex:0 0 auto;
+}
+
+.hero{
+margin:20px 12px;
+padding:40px 22px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:450px){
+
+.stats{
+grid-template-columns:1fr 1fr;
+}
+
+.title h2{
+font-size:24px;
+}
+
+}
+
+.search-box{
+display:flex;
+align-items:center;
+gap:5px;
+}
+
+.search-box input{
+width:160px;
+padding:9px 12px;
+border:1px solid #ffffff55;
+border-radius:10px 0 0 10px;
+background:#ffffff18;
+color:white;
+font-size:14px;
+outline:none;
+transition:.25s;
+}
+
+.search-box input::placeholder{
+color:#ffffffcc;
+}
+
+.search-box input:focus{
+background:white;
+color:#172033;
+}
+
+.search-box button{
+border:0;
+padding:9px 12px;
+border-radius:0 10px 10px 0;
+background:white;
+color:#0757a5;
+font-size:16px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.search-box button:hover{
+background:#e8f8ff;
+transform:translateY(-1px);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="top">
+
+<div class="brand-row">
+
+<div class="logo">
+🚀 Tech<span>Nova</span>
+</div>
+
+<div class="search-box">
+<input
+id="search"
+type="search"
+placeholder="Rechercher..."
+onkeydown="if(event.key==='Enter') rechercher()">
+
+<button onclick="rechercher()" aria-label="Rechercher">
+🔍
+</button>
+</div>
+
+</div>
+
+<nav>
+<a href="#accueil" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">🏠 Accueil</a>
+<a href="#applications">📱 Applications</a>
+<a href="#actualites">📰 À la une</a>
+<a href="#android">🤖 Android</a>
+<a href="#internet">🌐 Internet</a>
+<a href="#reseaux">📡 Réseaux</a>
+<a href="#termux">💻 Termux</a>
+<a href="#outils">🛠️ Outils</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="accueil">
+
+<div class="container">
+
+<div class="tag">
+🌍 TECHNOLOGIE POUR TOUS
+</div>
+
+<h1>
+Bienvenue sur TechNova
+</h1>
+
+<p>
+Découvrez des applications, astuces Android, Internet,
+réseaux, Termux et outils numériques utiles au quotidien.
+</p>
+
+<div class="buttons">
+
+<a class="btn blue" href="#applications">
+📱 Découvrir les applications
+</a>
+
+<a class="btn" href="#actualites">
+📰 Explorer TechNova
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<strong>📱</strong>
+Applications
+</div>
+
+<div class="stat">
+<strong>💡</strong>
+Astuces
+</div>
+
+<div class="stat">
+<strong>🌐</strong>
+Internet
+</div>
+
+<div class="stat">
+<strong>💻</strong>
+Termux
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- SEARCH -->
+
+
+
+
+<!-- PUBLICITE -->
+
+<div class="ad">
+📢 Espace publicitaire
+</div>
+
+
+<!-- APPLICATIONS -->
+
+<section class="section" id="applications">
+
+<div class="title">
+
+<h2>
+📱 Applications
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<!-- NDRUNA -->
+
+<div class="card searchable">
+
+<div class="icon">
+🎹
+</div>
+
+<span class="tag">
+APPLICATION ANDROID
+</span>
+
+<h3>
+Clavier Ndruna
+</h3>
+
+<p>
+Un clavier Android conçu pour faciliter l'écriture
+en langue Ndruna avec des caractères adaptés et
+un système de suggestions.
+</p>
+
+<a
+class="download"
+href="https://github.com/davidngufele2-gif/Nduna-Clavier/releases/download/v1.0/NdrunaKeyboard-release.apk">
+
+⬇️ Télécharger l'APK
+
+</a>
+
+<br>
+<br>
+
+<a
+class="github"
+href="https://github.com/davidngufele2-gif/Nduna-Clavier/releases/tag/v1.0">
+
+🔗 Voir le projet GitHub
+
+</a>
+
+<p style="margin-top:15px">
+
+📦 Version : 1.0
+<br>
+
+📊 Téléchargements :
+<strong id="ndruna-downloads">...</strong>
+
+</p>
+
+</div>
+
+
+<!-- AUTRES APPLICATIONS -->
+
+<div class="card searchable">
+
+<div class="icon">
+📲
+</div>
+
+<span class="tag">
+BIENTÔT
+</span>
+
+<h3>
+Autres applications
+</h3>
+
+<p>
+De nouvelles applications et outils seront ajoutés
+prochainement sur TechNova.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- A LA UNE -->
+
+<section class="section" id="actualites">
+
+<div class="title">
+
+<h2>
+🔥 À la une
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card searchable">
+
+<div class="icon">
+💡
+</div>
+
+<h3>
+Astuces technologiques
+</h3>
+
+<p>
+Découvrez progressivement des conseils simples
+pour mieux utiliser vos appareils et Internet.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">
+📰
+</div>
+
+<h3>
+Actualités Tech
+</h3>
+
+<p>
+Les nouveautés concernant Android, Internet,
+applications et technologies.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">
+🎬
+</div>
+
+<h3>
+Vidéos TechNova
+</h3>
+
+<p>
+Les vidéos et démonstrations de TechNova
+seront disponibles prochainement.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- PUBLICITE -->
+
+<div class="ad">
+📢 Espace publicitaire AdSense
+</div>
+
+
+<!-- ANDROID -->
+
+<section class="section" id="android">
+
+<div class="title">
+<h2>🤖 Android</h2>
+</div>
+
+<div class="grid">
+
+<div class="card searchable">
+
+<div class="icon">⚙️</div>
+
+<h3>
+Astuces Android
+</h3>
+
+<p>
+Conseils, réglages et solutions pour mieux
+utiliser Android.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">📱</div>
+
+<h3>
+Applications Android
+</h3>
+
+<p>
+Découvrez des applications et outils Android utiles.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INTERNET -->
+
+<section class="section" id="internet">
+
+<div class="title">
+<h2>🌐 Internet</h2>
+</div>
+
+<div class="grid">
+
+<div class="card searchable">
+
+<div class="icon">📶</div>
+
+<h3>
+Conseils Internet
+</h3>
+
+<p>
+Astuces pour améliorer votre connexion
+et économiser les données mobiles.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">🔐</div>
+
+<h3>
+Sécurité Internet
+</h3>
+
+<p>
+Conseils pour utiliser Internet de manière
+plus sûre.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESEAUX -->
+
+<section class="section" id="reseaux">
+
+<div class="title">
+<h2>📡 Réseaux</h2>
+</div>
+
+<div class="grid">
+
+<div class="card searchable">
+
+<div class="icon">📶</div>
+
+<h3>
+Wi-Fi, 4G et 5G
+</h3>
+
+<p>
+Informations et astuces concernant les
+connexions mobiles et Wi-Fi.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">📡</div>
+
+<h3>
+Routeurs
+</h3>
+
+<p>
+Conseils pour mieux comprendre et utiliser
+les routeurs et réseaux.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TERMUX -->
+
+<section class="section" id="termux">
+
+<div class="title">
+<h2>💻 Termux</h2>
+</div>
+
+<div class="grid">
+
+<div class="card searchable">
+
+<div class="icon">⌨️</div>
+
+<h3>
+Commandes Termux
+</h3>
+
+<p>
+Guides et commandes utiles pour apprendre
+à utiliser Termux sur Android.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">🛠️</div>
+
+<h3>
+Projets Android
+</h3>
+
+<p>
+Découvrez comment créer et construire
+des projets directement sur Android.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OUTILS -->
+
+<section class="section" id="outils">
+
+<div class="title">
+<h2>🛠️ Outils</h2>
+</div>
+
+<div class="grid">
+
+<div class="card searchable">
+
+<div class="icon">🔧</div>
+
+<h3>
+Outils gratuits
+</h3>
+
+<p>
+Une sélection d'outils pratiques pour
+Android et Internet.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">📚</div>
+
+<h3>
+Guides
+</h3>
+
+<p>
+Des guides simples pour résoudre
+différents problèmes technologiques.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PUBLICITE -->
+
+<div class="ad">
+📢 Publicité
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+<strong>🚀 TechNova</strong>
+</p>
+
+<p>
+Technologie • Applications • Internet • Astuces
+</p>
+
+<p style="margin-top:15px">
+© 2026 TechNova — Technologie pour tous
+</p>
+
+<p style="margin-top:10px">
+Applications • Astuces • Guides • Vidéos
+</p>
+
+</footer>
+
+
+<!-- SCRIPTS -->
+
+<script>
+
+/* COMPTEUR NDRUNA */
+
+async function afficherTelechargements(){
+
+try{
+
+const r = await fetch(
+"https://api.github.com/repos/davidngufele2-gif/Nduna-Clavier/releases/latest"
+);
+
+const release = await r.json();
+
+let total = 0;
+
+if(release.assets){
+
+release.assets.forEach(asset => {
+
+total += asset.download_count || 0;
+
+});
+
+}
+
+document.getElementById("ndruna-downloads").textContent =
+total.toLocaleString("fr-FR");
+
+}catch(e){
+
+document.getElementById("ndruna-downloads").textContent =
+"Indisponible";
+
+}
+
+}
+
+
+/* RECHERCHE */
+
+function rechercher(){
+
+const input = document.getElementById("search");
+const texte = input.value.trim().toLowerCase();
+
+const cartes = document.querySelectorAll(".searchable");
+
+if(texte === ""){
+
+cartes.forEach(card => {
+card.style.display = "";
+});
+
+return;
+}
+
+cartes.forEach(card => {
+
+const contenu = card.innerText.toLowerCase();
+
+if(contenu.includes(texte)){
+
+card.style.display = "";
+
+}else{
+
+card.style.display = "none";
+
+}
+
+});
+
+const resultats = Array.from(cartes).filter(card => {
+return card.innerText.toLowerCase().includes(texte);
+});
+
+if(resultats.length > 0){
+
+resultats[0].scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+}
+
+}
+
+afficherTelechargements();
+
+</script>
+
+</body>
+</html> html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TechNova — Technologie, Applications, Android & Internet</title>
+
+<meta name="description" content="TechNova : applications Android, astuces, Internet, réseaux, Termux et outils technologiques.">
+
+<meta name="google-adsense-account" content="ca-pub-8240074121562696">
+
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8240074121562696"
+crossorigin="anonymous"></script>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f7fb;
+color:#172033;
+line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,#06172f,#075bb5,#00a9ff);
+color:white;
+padding:14px 5%;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 20px #0003;
+}
+
+.top{
+max-width:1200px;
+margin:auto;
+}
+
+.brand-row{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+width:100%;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+white-space:nowrap;
+}
+
+.logo span{
+color:#61dcff;
+}
+
+.search-box{
+display:flex;
+align-items:center;
+margin-left:auto;
+}
+
+.search-box input{
+width:190px;
+height:40px;
+padding:8px 12px;
+border:1px solid #ffffff55;
+border-radius:10px 0 0 10px;
+background:#ffffff18;
+color:white;
+font-size:14px;
+outline:none;
+}
+
+.search-box input::placeholder{
+color:#ffffffcc;
+}
+
+.search-box input:focus{
+background:white;
+color:#172033;
+}
+
+.search-box button{
+height:40px;
+border:0;
+padding:0 14px;
+border-radius:0 10px 10px 0;
+background:white;
+color:#0757a5;
+font-size:17px;
+cursor:pointer;
+}
+
+.search-box button:hover{
+background:#e8f8ff;
+}
+
+nav{
+display:flex;
+gap:8px;
+align-items:center;
+flex-wrap:nowrap;
+overflow-x:auto;
+margin-top:12px;
+padding-bottom:3px;
+scrollbar-width:none;
+}
+
+nav::-webkit-scrollbar{
+display:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+padding:8px 11px;
+border-radius:10px;
+white-space:nowrap;
+transition:.25s;
+}
+
+nav a:hover{
+background:#ffffff22;
+color:#72dcff;
+}
+
+nav a:first-child{
+background:white;
+color:#0757a5;
+box-shadow:0 4px 12px #0003;
+}
+
+/* HERO */
+
+.hero{
+max-width:1200px;
+margin:30px auto;
+padding:60px 30px;
+border-radius:25px;
+background:linear-gradient(135deg,#061a36,#0866c7);
+color:white;
+box-shadow:0 15px 40px #0002;
+}
+
+.hero h1{
+font-size:42px;
+margin:12px 0;
+}
+
+.hero p{
+font-size:18px;
+max-width:720px;
+color:#dceeff;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+.tag{
+display:inline-block;
+padding:6px 12px;
+background:#e9f6ff;
+color:#0875bd;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+}
+
+.hero .tag{
+background:#ffffff22;
+color:#fff;
+}
+
+.buttons{
+margin-top:25px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:12px 20px;
+border-radius:12px;
+background:white;
+color:#0757a5;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn.blue{
+background:#00b7ff;
+color:white;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:35px;
+}
+
+.stat{
+background:#ffffff18;
+padding:18px;
+border-radius:15px;
+text-align:center;
+}
+
+.stat strong{
+font-size:27px;
+display:block;
+}
+
+/* SEARCH */
+
+.search{
+margin:30px auto;
+max-width:700px;
+}
+
+.search input{
+width:100%;
+padding:16px 20px;
+border:1px solid #d5deea;
+border-radius:14px;
+font-size:16px;
+outline:none;
+background:white;
+box-shadow:0 4px 15px #0000000b;
+}
+
+/* SECTIONS */
+
+.section{
+margin:50px 0;
+}
+
+.title{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:22px;
+}
+
+.title h2{
+font-size:29px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* CARDS */
+
+.card{
+background:white;
+border-radius:18px;
+padding:24px;
+box-shadow:0 5px 20px #0000000d;
+border:1px solid #e7edf5;
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 14px 30px #0002;
+}
+
+.icon{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.card h3{
+font-size:21px;
+margin:8px 0;
+}
+
+.card p{
+color:#657184;
+margin:10px 0 18px;
+}
+
+.download{
+display:inline-block;
+background:#0878d1;
+color:white;
+padding:11px 16px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.download:hover{
+background:#055fa8;
+}
+
+.github{
+display:inline-block;
+color:#075da8;
+font-weight:bold;
+text-decoration:none;
+}
+
+.github:hover{
+text-decoration:underline;
+}
+
+/* ADS */
+
+.ad{
+margin:30px 0;
+padding:28px;
+text-align:center;
+background:white;
+border:1px dashed #b9c6d7;
+border-radius:15px;
+color:#7a8798;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:70px;
+background:#06172f;
+color:#b9c9dd;
+padding:40px 20px;
+text-align:center;
+}
+
+footer strong{
+color:white;
+font-size:20px;
+}
+
+footer a{
+color:#66d7ff;
+text-decoration:none;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+header{
+padding:10px 12px;
+}
+
+.top{
+width:100%;
+}
+
+.brand-row{
+width:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:8px;
+}
+
+.logo{
+font-size:23px;
+}
+
+.search-box{
+margin-left:auto;
+flex-shrink:0;
+}
+
+.search-box input{
+width:115px;
+height:36px;
+font-size:13px;
+}
+
+.search-box button{
+height:36px;
+padding:0 10px;
+}
+
+nav{
+width:100%;
+overflow-x:auto;
+margin-top:10px;
+}
+
+nav a{
+font-size:12px;
+padding:7px 9px;
+flex:0 0 auto;
+}
+
+.hero{
+margin:20px 12px;
+padding:40px 22px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:450px){
+
+.stats{
+grid-template-columns:1fr 1fr;
+}
+
+.title h2{
+font-size:24px;
+}
+
+}
+
+.search-box{
+display:flex;
+align-items:center;
+gap:5px;
+}
+
+.search-box input{
+width:160px;
+padding:9px 12px;
+border:1px solid #ffffff55;
+border-radius:10px 0 0 10px;
+background:#ffffff18;
+color:white;
+font-size:14px;
+outline:none;
+transition:.25s;
+}
+
+.search-box input::placeholder{
+color:#ffffffcc;
+}
+
+.search-box input:focus{
+background:white;
+color:#172033;
+}
+
+.search-box button{
+border:0;
+padding:9px 12px;
+border-radius:0 10px 10px 0;
+background:white;
+color:#0757a5;
+font-size:16px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.search-box button:hover{
+background:#e8f8ff;
+transform:translateY(-1px);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="top">
+
+<div class="brand-row">
+
+<div class="logo">
+🚀 Tech<span>Nova</span>
+</div>
+
+<div class="search-box">
+<input
+id="search"
+type="search"
+placeholder="Rechercher..."
+onkeydown="if(event.key==='Enter') rechercher()">
+
+<button onclick="rechercher()" aria-label="Rechercher">
+🔍
+</button>
+</div>
+
+</div>
+
+<nav>
+<a href="#accueil" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">🏠 Accueil</a>
+<a href="#applications">📱 Applications</a>
+<a href="#actualites">📰 À la une</a>
+<a href="#android">🤖 Android</a>
+<a href="#internet">🌐 Internet</a>
+<a href="#reseaux">📡 Réseaux</a>
+<a href="#termux">💻 Termux</a>
+<a href="#outils">🛠️ Outils</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="accueil">
+
+<div class="container">
+
+<div class="tag">
+🌍 TECHNOLOGIE POUR TOUS
+</div>
+
+<h1>
+Bienvenue sur TechNova
+</h1>
+
+<p>
+Découvrez des applications, astuces Android, Internet,
+réseaux, Termux et outils numériques utiles au quotidien.
+</p>
+
+<div class="buttons">
+
+<a class="btn blue" href="#applications">
+📱 Découvrir les applications
+</a>
+
+<a class="btn" href="#actualites">
+📰 Explorer TechNova
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<strong>📱</strong>
+Applications
+</div>
+
+<div class="stat">
+<strong>💡</strong>
+Astuces
+</div>
+
+<div class="stat">
+<strong>🌐</strong>
+Internet
+</div>
+
+<div class="stat">
+<strong>💻</strong>
+Termux
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- SEARCH -->
+
+
+
+
+<!-- PUBLICITE -->
+
+<div class="ad">
+📢 Espace publicitaire
+</div>
+
+
+<!-- APPLICATIONS -->
+
+<section class="section" id="applications">
+
+<div class="title">
+
+<h2>
+📱 Applications
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<!-- NDRUNA -->
+
+<div class="card searchable">
+
+<div class="icon">
+🎹
+</div>
+
+<span class="tag">
+APPLICATION ANDROID
+</span>
+
+<h3>
+Clavier Ndruna
+</h3>
+
+<p>
+Un clavier Android conçu pour faciliter l'écriture
+en langue Ndruna avec des caractères adaptés et
+un système de suggestions.
+</p>
+
+<a
+class="download"
+href="https://github.com/davidngufele2-gif/Nduna-Clavier/releases/download/v1.0/NdrunaKeyboard-release.apk">
+
+⬇️ Télécharger l'APK
+
+</a>
+
+<br>
+<br>
+
+<a
+class="github"
+href="https://github.com/davidngufele2-gif/Nduna-Clavier/releases/tag/v1.0">
+
+🔗 Voir le projet GitHub
+
+</a>
+
+<p style="margin-top:15px">
+
+📦 Version : 1.0
+<br>
+
+📊 Téléchargements :
+<strong id="ndruna-downloads">...</strong>
+
+</p>
+
+</div>
+
+
+<!-- AUTRES APPLICATIONS -->
+
+<div class="card searchable">
+
+<div class="icon">
+📲
+</div>
+
+<span class="tag">
+BIENTÔT
+</span>
+
+<h3>
+Autres applications
+</h3>
+
+<p>
+De nouvelles applications et outils seront ajoutés
+prochainement sur TechNova.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- A LA UNE -->
+
+<section class="section" id="actualites">
+
+<div class="title">
+
+<h2>
+🔥 À la une
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card searchable">
+
+<div class="icon">
+💡
+</div>
+
+<h3>
+Astuces technologiques
+</h3>
+
+<p>
+Découvrez progressivement des conseils simples
+pour mieux utiliser vos appareils et Internet.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">
+📰
+</div>
+
+<h3>
+Actualités Tech
+</h3>
+
+<p>
+Les nouveautés concernant Android, Internet,
+applications et technologies.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">
+🎬
+</div>
+
+<h3>
+Vidéos TechNova
+</h3>
+
+<p>
+Les vidéos et démonstrations de TechNova
+seront disponibles prochainement.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- PUBLICITE -->
+
+<div class="ad">
+📢 Espace publicitaire AdSense
+</div>
+
+
+<!-- ANDROID -->
+
+<section class="section" id="android">
+
+<div class="title">
+<h2>🤖 Android</h2>
+</div>
+
+<div class="grid">
+
+<div class="card searchable">
+
+<div class="icon">⚙️</div>
+
+<h3>
+Astuces Android
+</h3>
+
+<p>
+Conseils, réglages et solutions pour mieux
+utiliser Android.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">📱</div>
+
+<h3>
+Applications Android
+</h3>
+
+<p>
+Découvrez des applications et outils Android utiles.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INTERNET -->
+
+<section class="section" id="internet">
+
+<div class="title">
+<h2>🌐 Internet</h2>
+</div>
+
+<div class="grid">
+
+<div class="card searchable">
+
+<div class="icon">📶</div>
+
+<h3>
+Conseils Internet
+</h3>
+
+<p>
+Astuces pour améliorer votre connexion
+et économiser les données mobiles.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">🔐</div>
+
+<h3>
+Sécurité Internet
+</h3>
+
+<p>
+Conseils pour utiliser Internet de manière
+plus sûre.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESEAUX -->
+
+<section class="section" id="reseaux">
+
+<div class="title">
+<h2>📡 Réseaux</h2>
+</div>
+
+<div class="grid">
+
+<div class="card searchable">
+
+<div class="icon">📶</div>
+
+<h3>
+Wi-Fi, 4G et 5G
+</h3>
+
+<p>
+Informations et astuces concernant les
+connexions mobiles et Wi-Fi.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">📡</div>
+
+<h3>
+Routeurs
+</h3>
+
+<p>
+Conseils pour mieux comprendre et utiliser
+les routeurs et réseaux.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TERMUX -->
+
+<section class="section" id="termux">
+
+<div class="title">
+<h2>💻 Termux</h2>
+</div>
+
+<div class="grid">
+
+<div class="card searchable">
+
+<div class="icon">⌨️</div>
+
+<h3>
+Commandes Termux
+</h3>
+
+<p>
+Guides et commandes utiles pour apprendre
+à utiliser Termux sur Android.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">🛠️</div>
+
+<h3>
+Projets Android
+</h3>
+
+<p>
+Découvrez comment créer et construire
+des projets directement sur Android.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OUTILS -->
+
+<section class="section" id="outils">
+
+<div class="title">
+<h2>🛠️ Outils</h2>
+</div>
+
+<div class="grid">
+
+<div class="card searchable">
+
+<div class="icon">🔧</div>
+
+<h3>
+Outils gratuits
+</h3>
+
+<p>
+Une sélection d'outils pratiques pour
+Android et Internet.
+</p>
+
+</div>
+
+
+<div class="card searchable">
+
+<div class="icon">📚</div>
+
+<h3>
+Guides
+</h3>
+
+<p>
+Des guides simples pour résoudre
+différents problèmes technologiques.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PUBLICITE -->
+
+<div class="ad">
+📢 Publicité
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+<strong>🚀 TechNova</strong>
+</p>
+
+<p>
+Technologie • Applications • Internet • Astuces
+</p>
+
+<p style="margin-top:15px">
+© 2026 TechNova — Technologie pour tous
+</p>
+
+<p style="margin-top:10px">
+Applications • Astuces • Guides • Vidéos
+</p>
+
+</footer>
+
+
+<!-- SCRIPTS -->
+
+<script>
+
+/* COMPTEUR NDRUNA */
+
+async function afficherTelechargements(){
+
+try{
+
+const r = await fetch(
+"https://api.github.com/repos/davidngufele2-gif/Nduna-Clavier/releases/latest"
+);
+
+const release = await r.json();
+
+let total = 0;
+
+if(release.assets){
+
+release.assets.forEach(asset => {
+
+total += asset.download_count || 0;
+
+});
+
+}
+
+document.getElementById("ndruna-downloads").textContent =
+total.toLocaleString("fr-FR");
+
+}catch(e){
+
+document.getElementById("ndruna-downloads").textContent =
+"Indisponible";
+
+}
+
+}
+
+
+/* RECHERCHE */
+
+function rechercher(){
+
+const input = document.getElementById("search");
+const texte = input.value.trim().toLowerCase();
+
+const cartes = document.querySelectorAll(".searchable");
+
+if(texte === ""){
+
+cartes.forEach(card => {
+card.style.display = "";
+});
+
+return;
+}
+
+cartes.forEach(card => {
+
+const contenu = card.innerText.toLowerCase();
+
+if(contenu.includes(texte)){
+
+card.style.display = "";
+
+}else{
+
+card.style.display = "none";
+
+}
+
+});
+
+const resultats = Array.from(cartes).filter(card => {
+return card.innerText.toLowerCase().includes(texte);
+});
+
+if(resultats.length > 0){
+
+resultats[0].scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+}
+
+}
+
+afficherTelechargements();
+
+</script>
+
+</body>
 </html>
